@@ -41,7 +41,7 @@ public class ParkingServiceImpl implements IParkingService {
         for (RecordEntity record : reponse.getRecords()){
             Parking parking = new Parking();
             parking.setNom(record.getFields().getGrpnom());
-            parking.setStatut(record.getFields().getGrpStatut());
+            parking.setStatut(getLibelleStatut(record));
             parking.setNbPlaceDisponible(record.getFields().getGrpDisponible());
             parking.setNbPlaceDisponible(record.getFields().getGrpDisponible());
             parking.setHeureMaj(record.getFields().getGrpHorodatage());
@@ -50,5 +50,16 @@ public class ParkingServiceImpl implements IParkingService {
         }
 
         return resultat;
+    }
+
+    private String getLibelleStatut(RecordEntity record) {
+        switch (record.getFields().getGrpStatut()){
+            case "1": return "Ferme";
+            case "2": return "ABONNES";
+            case "5": return "Ouvert";
+            default: return "données non disponible";
+        }
+        
+
     }
 }
