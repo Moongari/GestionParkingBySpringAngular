@@ -9,6 +9,7 @@ import com.TrainingSpring.parking.models.Parking;
 import com.TrainingSpring.parking.services.IParkingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,7 +24,7 @@ public class ParkingController {
     private IParkingService parkingService;
 
 
-
+    @CrossOrigin("http://localhost:4200")
     @RequestMapping(path = "/api/parkings")
     @ResponseStatus(code = HttpStatus.OK)
     public List<Parking> getListParkings(){

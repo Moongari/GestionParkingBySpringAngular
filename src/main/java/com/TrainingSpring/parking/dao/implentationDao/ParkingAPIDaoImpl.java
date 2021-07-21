@@ -11,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
 public class ParkingAPIDaoImpl implements ParkingApiDao {
     @Autowired
     private RestTemplate restTemplate; // permet via spring de faire requete http sur une URL
+
     private final String url_API_OPEN_DATA = "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_parkings-publics-nantes-disponibilites&q=&facet=grp_nom&facet=grp_statut";
 
     @Override
