@@ -8,6 +8,10 @@ public class Parking {
     private String statut;
     private String heureMaj;
 
+
+
+    public Parking(){}
+
     public Parking(String nom, int nbPlaceTotal, int nbPlaceDisponible, String statut, String heureMaj) {
         this.nom = nom;
         this.nbPlaceTotal = nbPlaceTotal;
