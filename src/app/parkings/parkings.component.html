@@ -1,9 +1,8 @@
-<p>parkings works!</p>
 
-<div *ngFor="let parking of parkings">
-  <div>Nom: {{parking.nom}}</div>
-  <div>Nombre de places disponibles: {{parking.nbPlaceDispo}}</div>
-  <div>Nombre de places totales: {{parking.nbPlaceTotal}}</div>
-  <div>Statut: {{parking.statut}}</div>
-  <div>Heure de mise a jour : {{parking.heurMaj}}</div>
-</div>
+<mat-card *ngFor="let parking of parkings" class="parkingCard">
+  <span class="NameParking">Parking : {{parking.nom}}</span>
+  <span class="statut">{{parking.statut}}</span>
+  <div >Places disponibles : {{parking.nbPlaceDispo}}</div>
+  <div >Places totales : {{parking.nbPlaceTotal}}</div>
+  <div >Heure de mise a jour : {{parking.heurMaj}}</div>
+</mat-card>
