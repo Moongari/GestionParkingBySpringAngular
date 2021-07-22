@@ -18,3 +18,4 @@ import { ParkingsComponent } from './parkings/parkings.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

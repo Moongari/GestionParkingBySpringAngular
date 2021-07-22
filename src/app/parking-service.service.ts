@@ -15,7 +15,6 @@ export class ParkingServiceService {
 
     return this.HttpClient.get<ParkingInfo[]>('http://localhost:8082/api/parkings');
 
-
   }
 
 
